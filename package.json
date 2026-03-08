@@ -1,5 +1,6 @@
 {
   "name": "servicecapture-site",
+  "homepage": "https://servicecapture.app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
