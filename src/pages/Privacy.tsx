@@ -167,7 +167,7 @@ const Privacy: React.FC = () => {
 
                     <Subtitle>Children's Privacy</Subtitle>
                     <Text>
-                        We do not aim any of our products or services directly at children under the age of 13 and we do not knowingly collect personal information about children under 13.
+                        We do not aim any of our products or services directly at children under the age of 13 (or the applicable minimum age in your jurisdiction) and we do not knowingly collect personal information about children under 13.
                     </Text>
 
                     <Subtitle>Disclosure of Personal Information to Third Parties</Subtitle>
