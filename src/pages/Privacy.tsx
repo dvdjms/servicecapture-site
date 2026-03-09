@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/NavBar';
@@ -65,6 +63,14 @@ const Privacy: React.FC = () => {
                     </Text>
                     <Text>
                         If you would like us to delete your data, please email <a href="mailto:contact@servicecapture.app">contact@servicecapture.app</a> and we will get that done for you.
+                    </Text>
+
+                    <Subtitle>Data Selling and Deletion</Subtitle>
+                    <Text>
+                        Service Capture does not sell, rent, or trade your personal information to third parties.
+                    </Text>
+                    <Text>
+                        You may request deletion of your account and all associated data at any time by contacting <a href="mailto:contact@servicecapture.app">contact@servicecapture.app</a>.
                     </Text>
 
                     <Subtitle>Information We Collect</Subtitle>
