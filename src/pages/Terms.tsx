@@ -98,9 +98,6 @@ const Terms: React.FC = () => {
                 Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
             </Text>
 
-
-
-
             <Subtitle>Accuracy of Materials</Subtitle>
             <Text>
                 The materials appearing in Service Capture or on our website are not comprehensive and are for general information purposes only. To the extent permitted by law, Service Capture does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials in Service Capture or on our website, or otherwise relating to such materials or on any resources linked to Service Capture and our website.
