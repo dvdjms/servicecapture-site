@@ -24,7 +24,7 @@ const styles: { [key: string]: React.CSSProperties } = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#f9f9f9',
+        backgroundColor: '#f2f2f7',
         fontSize: '0.875rem',
         marginTop: '2rem',
     },

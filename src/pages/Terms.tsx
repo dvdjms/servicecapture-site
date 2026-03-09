@@ -19,67 +19,143 @@ const Terms: React.FC = () => {
             <Title>Terms of Service</Title>
             <LastUpdated>Last updated: {currentDate}</LastUpdated>
 
-            <Subtitle>1. Acceptance of Terms</Subtitle>
+            <Subtitle>Service Capture Terms of Service</Subtitle>
             <Text>
-                By accessing or using The Service, you agree to be bound by these Terms of Service 
-                and all applicable laws and regulations. If you do not agree with any part of these 
-                terms, you may not use our services.
+                These Terms of Service govern your use of Service Capture, our website located at <a href="https://servicecapture.app" target="_blank" rel="noopener noreferrer">servicecapture.app</a>, and any related services provided by Service Capture.
+            </Text>
+            <Text>
+                When you create a Service Capture account or use Service Capture, you agree to abide by these Terms of Service and to comply with all applicable laws and regulations. If you do not agree with these Terms of Service, you are prohibited from further using the app or using any other services provided by Service Capture.
+            </Text>
+            <Text>
+                If you access or download Service Capture from (1) the Apple App Store, you agree to any Usage Rules set forth in the App Store Terms of Service; and/or (2) the Google Play Store, you agree to the Android, Google Inc. Terms and Conditions including the Google Apps Terms of Service.
+            </Text>
+            <Text>
+                We, Service Capture, reserve the right to review and amend any of these Terms of Service at our sole discretion. Upon doing so, we will update this page and notify you through the app and/or the email address you provided when you created your account. Any changes to these Terms of Service will take effect immediately from the date of publication.
+            </Text>
+            <Text>
+                These Terms of Service were last updated on 09 March 2026.
             </Text>
 
-            <Subtitle>2. Use License</Subtitle>
+
+
+
+            <Subtitle>Limitations of Use</Subtitle>
             <Text>
-                Permission is granted to temporarily download one copy of the materials (information 
-                or software) on The Service's website for personal, non-commercial transitory viewing only.
+                By using Service Capture and our website, you warrant on behalf of yourself, any entity who you represent who has entered into these Terms of Service, and your users that you will not:
             </Text>
 
-            <Subtitle>3. Disclaimer</Subtitle>
+            <ul>
+                <li>modify, copy, prepare derivative works of, decompile, or reverse engineer Service Capture or any materials and software contained within Service Capture or on our website;</li>
+                <li>remove any copyright or other proprietary notations from Service Capture or any materials and software contained within Service Capture or on our website;</li>
+                <li>transfer Service Capture or any of its associated materials to another person or "mirror" the materials on any other server;</li>
+                <li>knowingly or negligently use Service Capture or any of its associated services in a way that abuses or disrupts our networks or any other service Service Capture provides;</li>
+                <li>use Service Capture or its associated services to transmit or publish any harassing, indecent, obscene, fraudulent, or unlawful material;</li>
+                <li>use Service Capture or its associated services in violation of any applicable laws or regulations;</li>
+                <li>use Service Capture to send unauthorised advertising or spam;</li>
+                <li>harvest, collect, or gather user data without the user's consent; or</li>
+                <li>use Service Capture or its associated services in such a way that may infringe the privacy, intellectual property rights, or other rights of third parties.</li>
+            </ul>
+
+
+            <Subtitle>Intellectual Property</Subtitle>
             <Text>
-                The materials on The Service's website are provided on an 'as is' basis. The Service 
-                makes no warranties, expressed or implied, and hereby disclaims and negates all other 
-                warranties including, without limitation, implied warranties or conditions of 
-                merchantability, fitness for a particular purpose, or non-infringement of intellectual 
-                property or other violation of rights.
+                The intellectual property in the materials in Service Capture and on our website are owned by or licensed to Service Capture. You may download Service Capture to view, use, and display the application on your mobile device for your personal use only.
+            </Text>
+            <Text>
+                This constitutes the grant of a licence, not a transfer of title. This licence shall automatically terminate if you violate any of these restrictions or these Terms of Service and may be terminated by Service Capture at any time.
             </Text>
 
-            <Subtitle>4. Limitations</Subtitle>
+            <Subtitle>User-Generated Content</Subtitle>
             <Text>
-                In no event shall The Service or its suppliers be liable for any damages (including, 
-                without limitation, damages for loss of data or profit, or due to business interruption) 
-                arising out of the use or inability to use the materials on The Service's website.
+                You retain your intellectual property ownership rights over content you submit to us for publication within Service Capture and/or on its corresponding website. We will never claim ownership of your content but we do require a licence from you in order to use it.
+            </Text>
+            <Text>
+                When you use Service Capture or its associated services to post, upload, share or otherwise transmit content covered by intellectual property rights, you grant to us a non-exclusive, royalty-free, transferable, sub-licensable, worldwide licence to use, distribute, modify, run, copy, publicly display, translate or otherwise create derivative works of your content in a manner that is consistent with your privacy preferences and our Privacy Policy.
+            </Text>
+            <Text>
+                The licence you grant us can be terminated at any time by deleting your content or account. However, to the extent that we (or our partners) have used your content in connection with commercial or sponsored content, the licence will continue until the relevant commercial or post has been discontinued by us.
+            </Text>
+            <Text>
+                You give us permission to use your username and other identifying information associated with your account in a manner that is consistent with your privacy preferences and our Privacy Policy.
             </Text>
 
-            <Subtitle>5. Accuracy of Materials</Subtitle>
+            <Subtitle>Automatic Updates</Subtitle>
             <Text>
-                The materials appearing on The Service's website could include technical, typographical, 
-                or photographic errors. The Service does not warrant that any of the materials on its 
-                website are accurate, complete, or current.
+                You give us permission to download and install updates to Service Capture on your device in accordance with your privacy preferences. This permission can be revoked at any time by deleting Service Capture from your device.
             </Text>
 
-            <Subtitle>6. Links</Subtitle>
+            <Subtitle>Liability</Subtitle>
             <Text>
-                The Service has not reviewed all of the sites linked to its website and is not responsible 
-                for the contents of any such linked site. The inclusion of any link does not imply 
-                endorsement by The Service of the site.
+                Service Capture and the materials in Service Capture and on our website are provided on an 'as is' basis. To the extent permitted by law, Service Capture makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property, or other violation of rights.
+            </Text>
+            <Text>
+                In no event shall Service Capture or its suppliers be liable for any consequential loss suffered or incurred by you or any third party arising from the use or inability to use Service Capture, our website, or any other services provided by Service Capture or the materials in Service Capture, even if Service Capture or an authorised representative has been notified, orally or in writing, of the possibility of such damage.
+            </Text>
+            <Text>
+                In the context of this agreement, "consequential loss" includes any consequential loss, indirect loss, real or anticipated loss of profit, loss of benefit, loss of revenue, loss of business, loss of goodwill, loss of opportunity, loss of savings, loss of reputation, loss of use and/or loss or corruption of data, whether under statute, contract, equity, tort (including negligence), indemnity or otherwise.
+            </Text>
+            <Text>
+                Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
             </Text>
 
-            <Subtitle>7. Modifications</Subtitle>
+
+
+
+            <Subtitle>Accuracy of Materials</Subtitle>
             <Text>
-                The Service may revise these terms of service for its website at any time without notice. 
-                By using this website you are agreeing to be bound by the then current version of these 
-                terms of service.
+                The materials appearing in Service Capture or on our website are not comprehensive and are for general information purposes only. To the extent permitted by law, Service Capture does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials in Service Capture or on our website, or otherwise relating to such materials or on any resources linked to Service Capture and our website.
             </Text>
 
-            <Subtitle>8. Governing Law</Subtitle>
+            <Subtitle>Links</Subtitle>
             <Text>
-                These terms and conditions are governed by and construed in accordance with the laws and 
-                you irrevocably submit to the exclusive jurisdiction of the courts in that location.
+                Service Capture has not reviewed all of the sites linked to Service Capture or on its corresponding website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement, approval or control by Service Capture of the site. Use of any such linked website is at your own risk and we strongly advise you make your own investigations with respect to the suitability of those sites.            
             </Text>
 
-            <Subtitle>9. Contact Information</Subtitle>
+
+            <Subtitle>Notice regarding Apple</Subtitle>
             <Text>
-                If you have any questions about these Terms of Service, please contact us at:
+                To the extent that you are using or accessing Service Capture on an iOS device, you acknowledge and agree to the terms of this clause. You acknowledge that these Terms of Service are between you and Service Capture only, not with Apple Inc. (Apple), and Apple is not responsible for Service Capture and any materials available in Service Capture.
             </Text>
-            <Text><strong>Email:</strong> dvdjms@hotmail.com</Text>
+            <Text>
+                Apple has no obligation to furnish you with any maintenance and support services with respect to Service Capture.     
+            </Text>
+            <Text>
+                If Service Capture fails to conform to any applicable warranty, you may notify Apple and Apple will refund the purchase price of the mobile application to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to Service Capture and any other claims, losses, liabilities, damages, costs or expenses attributable to any failure to conform to any warranty will be our responsibility.
+            </Text>
+            <Text>
+                Apple is not responsible for addressing any claims by you or any third party relating to Service Capture or your use of Service Capture, including but not limited to (1) product liability claims; (2) any claim that our mobile application fails to conform to any applicable legal or regulatory requirement; and (3) claims arising under consumer protection or similar legislation.
+            </Text>
+            <Text>
+                Apple is not responsible for the investigation, defence, settlement and discharge of any third-party claim that our mobile application infringes that third party’s intellectual property rights.
+            </Text>
+            <Text>
+                You agree to comply with any applicable third-party terms when using Service Capture, including any Usage Rules set forth in the Apple App Store Agreement of Service.
+            </Text>
+            <Text>
+                Apple and Apple’s subsidiaries are third-party beneficiaries of these Terms of Service and, upon your acceptance of these Terms of Service, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms of Service against you as a third-party beneficiary of these Terms of Service.
+            </Text>
+            <Text>
+                You hereby represent and warrant that (1) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a 'terrorist supporting' country; and (2) you are not listed on any U.S. Government list of prohibited or restricted parties.
+            </Text>
+  
+
+            <Subtitle>Right to Terminate</Subtitle>
+            <Text>
+                We may suspend or terminate your Service Capture account and right to use Service Capture and these Terms of Service immediately upon written notice to you for any breach of these Terms of Service.            
+            </Text>
+
+            <Subtitle>Severance</Subtitle>
+            <Text>
+                Any term of these Terms of Service which is wholly or partially void or unenforceable is severed to the extent that it is void or unenforceable. The validity of the remainder of these Terms of Service is not affected.            
+            </Text>
+
+            <Subtitle>Governing Law</Subtitle>
+            <Text>
+                These Terms of Service are governed by and construed in accordance with the laws of United Kingdom. You irrevocably submit to the exclusive jurisdiction of the courts in that State or location.      
+            </Text>
+
+
+
             </TermsContainer>
         </MainContent>
         <Footer />
@@ -98,7 +174,7 @@ const PageContainer = styled.div`
 const MainContent = styled.main`
     flex: 1;
     padding: 40px 20px;
-    background: #f8f9fa;
+    background: #f2f2f7;
 `;
 
 const TermsContainer = styled.div`
@@ -112,7 +188,7 @@ const TermsContainer = styled.div`
 
 const Title = styled.h1`
     color: #2c3e50;
-    border-bottom: 2px solid #667eea;
+    border-bottom: 2px solid #431980;
     padding-bottom: 10px;
     margin-bottom: 20px;
 `;

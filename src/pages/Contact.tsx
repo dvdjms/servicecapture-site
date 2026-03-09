@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/NavBar';
 import Footer from '../components/Footer';
-
+// import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -13,28 +13,44 @@ const Contact: React.FC = () => {
     });
     
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
+    // const [isSuccess, setIsSuccess] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
-        ...formData,
-        [e.target.name]: e.target.value
+            ...formData,
+            [e.target.name]: e.target.value
         });
     };
+
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
         
-        // Simulate form submission
-        setTimeout(() => {
-        setIsSubmitting(false);
-        setIsSuccess(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        
-        // Reset success message after 5 seconds
-        setTimeout(() => setIsSuccess(false), 5000);
-        }, 1500);
+        // emailjs.send(
+        //     'YOUR_SERVICE_ID',
+        //     'YOUR_TEMPLATE_ID',
+        //     {
+        //         from_name: formData.name,
+        //         from_email: formData.email,
+        //         subject: formData.subject,
+        //         message: formData.message,
+        //         to_email: 'contact@servicecapture.app'
+        //     },
+        //     'YOUR_PUBLIC_KEY'
+        // ).then(
+        //     () => {
+        //         setIsSubmitting(false);
+        //         setIsSuccess(true);
+        //         setFormData({ name: '', email: '', subject: '', message: '' });
+        //         setTimeout(() => setIsSuccess(false), 5000);
+        //     },
+        //     (error: any) => {
+        //         setIsSubmitting(false);
+        //         alert('Failed to send message. Please try again.');
+        //         console.warn('Failed to send message', error);
+        //     }
+        // );
     };
 
     return (
@@ -49,32 +65,32 @@ const Contact: React.FC = () => {
                 <Icon>📧</Icon>
                 <ContactDetail>
                     <Label>Email</Label>
-                    <Value>dvdjms@hotmail.com</Value>
+                    <Value>contact@servicecapture.app</Value>
                 </ContactDetail>
                 </ContactItem>
                 
                 <ContactItem>
                 <Icon>📱</Icon>
-                <ContactDetail>
+                {/* <ContactDetail>
                     <Label>Phone</Label>
                     <Value>+1 (555) 123-4567</Value>
-                </ContactDetail>
+                </ContactDetail> */}
                 </ContactItem>
                 
                 <ContactItem>
                 <Icon>📍</Icon>
-                <ContactDetail>
+                {/* <ContactDetail>
                     <Label>Address</Label>
                     <Value>123 Tech Street, San Francisco, CA 94105</Value>
-                </ContactDetail>
+                </ContactDetail> */}
                 </ContactItem>
             </ContactInfo>
 
-            {isSuccess && (
+            {/* {isSuccess && ( */}
                 <SuccessMessage>
                 Thank you for your message! We'll get back to you soon.
                 </SuccessMessage>
-            )}
+            {/* )} */}
 
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
@@ -151,7 +167,7 @@ const PageContainer = styled.div`
 const MainContent = styled.main`
     flex: 1;
     padding: 40px 20px;
-    background: #f8f9fa;
+    background: #f2f2f7;
 `;
 
 const ContactContainer = styled.div`
@@ -165,7 +181,7 @@ const ContactContainer = styled.div`
 
 const Title = styled.h1`
     color: #2c3e50;
-    border-bottom: 2px solid #667eea;
+    border-bottom: 2px solid #431980;
     padding-bottom: 10px;
     margin-bottom: 30px;
 `;
@@ -237,7 +253,7 @@ const Input = styled.input`
     
     &:focus {
         outline: none;
-        border-color: #667eea;
+        border-color: #431980;
     }
 `;
 
@@ -251,13 +267,13 @@ const TextArea = styled.textarea`
     
     &:focus {
         outline: none;
-        border-color: #667eea;
+        border-color: #431980;
     }
 `;
 
 const SubmitButton = styled.button`
     padding: 15px 30px;
-    background: #667eea;
+    background: #431980;
     color: white;
     border: none;
     border-radius: 8px;

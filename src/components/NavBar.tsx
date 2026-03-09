@@ -1,48 +1,60 @@
-// src/components/Navbar.tsx
 import React from 'react'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components';
+import icon from '../assets/icon.png'
 
 const Navbar: React.FC = () => {
     return (
-        <nav style={styles.nav}>
-            {/* <div style={styles.logo}>Service Capture</div> */}
-            <Link to="/" style={styles.Logolink}>Service Capture</Link>
-
-        </nav>
+        <Nav>
+            <LogoContainer to="/">
+                <LogoImage src={icon} alt="Service Capture Logo" />
+                <Service>Service</Service><Orange /><Capture>Capture</Capture>
+            </LogoContainer>
+        </Nav>
     )
 }
 
-const styles: { [key: string]: React.CSSProperties } = {
-    nav: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '1rem 2rem',
-        borderBottom: '1px solid #ddd',
-        backgroundColor: '#fff',
-        position: 'sticky',
-        top: 0,
-        zIndex: 1000,
-    },
-    logo: {
-        fontWeight: 700,
-        fontSize: '1.25rem',
-        color: '#333',
-    },
-    links: {
-        display: 'flex',
-        gap: '1rem',
-    },
-    link: {
-        textDecoration: 'none',
-        color: '#333',
-        fontWeight: 500,
-    },
-    Logolink: {
-        fontWeight: 700,
-        fontSize: '1.25rem',
-        color: '#333',
-    }
-}
+
+// Styled components
+const Nav = styled.nav`
+    background-color: #f2f2f7;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+`;
+
+const LogoContainer = styled(Link)`
+    display: inline-flex;
+    align-items: center;
+    padding-left: 20px;
+`;
+
+const LogoImage = styled.img`
+    height: 40px;
+    width: auto;
+`;
+
+const Service = styled.div`
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #431980;
+    text-decoration: none;
+    margin-left: 10px;
+`;
+
+const Capture = styled.div`
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #907ad6;
+    text-decoration: none;
+`;
+
+const Orange = styled.div`
+    height: 7px;
+    width: 7px;
+    border-radius: 3.5px;
+    background-color: #F97316;
+    margin-top: 3px;
+`
+
 
 export default Navbar
