@@ -5,11 +5,6 @@ import Footer from '../components/Footer';
 
 
 const Terms: React.FC = () => {
-    const currentDate = new Date().toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
 
     return (
         <PageContainer>
@@ -17,7 +12,7 @@ const Terms: React.FC = () => {
         <MainContent>
             <TermsContainer>
             <Title>Terms of Service</Title>
-            <LastUpdated>Last updated: {currentDate}</LastUpdated>
+            <LastUpdated>Last updated: 31 March, 2026</LastUpdated>
 
             <Subtitle>Service Capture Terms of Service</Subtitle>
             <Text>
@@ -32,12 +27,6 @@ const Terms: React.FC = () => {
             <Text>
                 We, Service Capture, reserve the right to review and amend any of these Terms of Service at our sole discretion. Upon doing so, we will update this page and notify you through the app and/or the email address you provided when you created your account. Any changes to these Terms of Service will take effect immediately from the date of publication.
             </Text>
-            <Text>
-                These Terms of Service were last updated on 09 March 2026.
-            </Text>
-
-
-
 
             <Subtitle>Limitations of Use</Subtitle>
             <Text>

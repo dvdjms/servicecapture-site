@@ -13,7 +13,7 @@ const Cookies: React.FC = () => {
                     
                     <Subtitle>Service Capture Cookie Policy</Subtitle>
                     <Text>
-                        <strong>Effective Date:</strong> 09 March 2026
+                        <strong>Effective Date:</strong> 31 March 2026
                     </Text>
                     
                     <Text>

@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/NavBar';
 import Footer from '../components/Footer';
 
 
 const Privacy: React.FC = () => {
-    const [currentDate, setCurrentDate] = useState('');
-
-    useEffect(() => {
-        const date = new Date().toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-        setCurrentDate(date);
-    }, []);
 
     return (
         <PageContainer>
@@ -22,9 +12,8 @@ const Privacy: React.FC = () => {
         <MainContent>
             <PolicyContainer>
                 <Title>Privacy Policy</Title>
-                {/* <LastUpdated>Last updated: {currentDate}</LastUpdated> */}
+                <LastUpdated>Last updated: 31 March, 2026</LastUpdated>
       
-
                     <Subtitle>Service Capture Privacy Policy</Subtitle>
                     <Text>
                         Your privacy is important to us. It is Service Capture's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including via our app, Service Capture, and its associated services.
@@ -36,10 +25,8 @@ const Privacy: React.FC = () => {
                         In the event our app contains links to third-party sites and services, please be aware that those sites and services have their own privacy policies. After following a link to any third-party content, you should read their posted privacy policy information about how they collect and use personal information. This Privacy Policy does not apply to any of your activities after you leave our app.
                     </Text>
                     <Text>
-                        This policy is effective as of 09 March 2026.
+                        This policy is effective as of 31 March 2026.
                     </Text>
-
-                    <LastUpdated>Last updated: {currentDate}</LastUpdated>
 
                     <Subtitle>At-a-Glance</Subtitle>
                     <Text>

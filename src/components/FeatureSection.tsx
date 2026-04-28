@@ -1,123 +1,152 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-
+import styled from 'styled-components';
+import clientList from '../assets/clientList-portrait.webp';
+import clientScreen from '../assets/clientScreen-portrait.webp';
+import schedulerScreen from '../assets/schedulerScreen-portrait.webp';
 
 const FeatureSection: React.FC = () => {
-    return (
-        <>
+    const features = [
+        {
+            icon: "👥",
+            title: "All clients in one place",
+            description: "Quickly search, view, and manage all your clients in a simple, organised list.",
+            screenshot: clientList,
+            alt: "Client list interface showing list of clients"
+        },
+        {
+            icon: "📂",
+            title: "Organise Every Job",
+            description: "Attach notes, photos, and client details to each job for clear, complete records in the field.",
+            screenshot: clientScreen,
+            alt: "Client screen with job details and attachments"
+        },
+        {
+            icon: "📅",
+            title: "Scheduler to plan ahead",
+            description: "Plan your daily and upcoming work with a simple, visual scheduling system.",
+            screenshot: schedulerScreen,
+            alt: "Scheduler screen showing todays work"
+        }
+    ];
 
-            <FeaturesSection>
-                <SectionTitle>Why Choose Service Capture?</SectionTitle>
-                <FeatureGrid>
-                    <FeatureCard delay="0.2s">
-                        <FeatureIcon>🚀</FeatureIcon>
-                        <FeatureTitle>Lightning Fast</FeatureTitle>
-                        <FeatureDescription>
-                        Capture and process service requests in real-time
-                        </FeatureDescription>
-                    </FeatureCard>
-                    <FeatureCard delay="0.4s">
-                        <FeatureIcon>🔒</FeatureIcon>
-                        <FeatureTitle>Secure & Private</FeatureTitle>
-                        <FeatureDescription>
-                            Your data is encrypted and protected with enterprise-grade security
-                        </FeatureDescription>
-                    </FeatureCard>
-                    <FeatureCard delay="0.6s">
-                        <FeatureIcon>📊</FeatureIcon>
-                        <FeatureTitle>Smart Analytics</FeatureTitle>
-                        <FeatureDescription>
-                            Get insights into your service performance with detailed analytics
-                        </FeatureDescription>
-                    </FeatureCard>
-                </FeatureGrid>
-            </FeaturesSection>
-        </>
+    return (
+        <FeaturesSection id="features">
+            <Container>
+                <SectionHeader>
+                    <Eyebrow>Features</Eyebrow>
+                    <Title>Everything you need to document work professionally.</Title>
+                </SectionHeader>
+
+                <FeaturesGrid>
+                    {features.map((feature, idx) => (
+                        <FeatureCard key={idx}>
+                            <FeatureIcon>{feature.icon}</FeatureIcon>
+                            <FeatureTitle>{feature.title}</FeatureTitle>
+                            <FeatureDescription>{feature.description}</FeatureDescription>
+                            <ScreenshotWrapper>
+                                <ScreenshotImage 
+                                    src={feature.screenshot} 
+                                    alt={feature.alt}
+                                    fetchPriority="high"
+                                />
+                            </ScreenshotWrapper>
+                        </FeatureCard>
+                    ))}
+                </FeaturesGrid>
+            </Container>
+        </FeaturesSection>
     );
 };
 
 export default FeatureSection;
 
-// Animations
-const fadeIn = keyframes`
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
-
-const float = keyframes`
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-`;
-
-// Features Section
 const FeaturesSection = styled.section`
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 80px 0;
+    background: white;
 `;
 
-const SectionTitle = styled.h2`
+const Container = styled.div`
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+`;
+
+const SectionHeader = styled.div`
     text-align: center;
+    margin-bottom: 60px;
+`;
+
+const Eyebrow = styled.div`
+    color: #431980;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+`;
+
+const Title = styled.h2`
     font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 3rem;
-    position: relative;
-  
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: #667eea;
-        border-radius: 2px;
+    font-weight: 700;
+    color: #1a1a1a;
+    
+    @media (max-width: 768px) {
+        font-size: 2rem;
     }
 `;
 
-const FeatureGrid = styled.div`
+const FeaturesGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
 `;
 
-const FeatureCard = styled.div<{ delay: string }>`
-    padding: 30px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+const FeatureCard = styled.div`
+    background: #f8f9fa;
+    border-radius: 24px;
+    padding: 32px;
     text-align: center;
     transition: all 0.3s ease;
-    animation: ${fadeIn} 1s ease-out ${props => props.delay} both;
+    border: 1px solid #e9ecef;
     
     &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+        transform: translateY(-8px);
+        box-shadow: 0 20px 30px rgba(0,0,0,0.05);
+        border-color: #dee2e6;
     }
 `;
 
 const FeatureIcon = styled.div`
     font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: ${float} 3s ease-in-out infinite;
+    margin-bottom: 20px;
 `;
 
 const FeatureTitle = styled.h3`
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a1a1a;
 `;
 
 const FeatureDescription = styled.p`
-    color: #666;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 28px;
+`;
+
+const ScreenshotWrapper = styled.div`
+
+`;
+
+const ScreenshotImage = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    
+    ${FeatureCard}:hover & {
+        transform: scale(1.02);
+    }
 `;

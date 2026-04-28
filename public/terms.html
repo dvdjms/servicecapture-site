@@ -117,14 +117,13 @@
         <div class="terms-container">
 
             <h1>Terms of Service</h1>
-            <p class="last-updated" id="last-updated"></p>
+            <p class="last-updated" id="last-updated">Last updated: 31 March, 2026</p>
 
             <h2>Service Capture Terms of Service</h2>
             <p>These Terms of Service govern your use of Service Capture, our website located at <a href="https://servicecapture.app" target="_blank" rel="noopener noreferrer">servicecapture.app</a>, and any related services provided by Service Capture.</p>
             <p>When you create a Service Capture account or use Service Capture, you agree to abide by these Terms of Service and to comply with all applicable laws and regulations. If you do not agree with these Terms of Service, you are prohibited from further using the app or using any other services provided by Service Capture.</p>
             <p>If you access or download Service Capture from (1) the Apple App Store, you agree to any Usage Rules set forth in the App Store Terms of Service; and/or (2) the Google Play Store, you agree to the Android, Google Inc. Terms and Conditions including the Google Apps Terms of Service.</p>
             <p>We, Service Capture, reserve the right to review and amend any of these Terms of Service at our sole discretion. Upon doing so, we will update this page and notify you through the app and/or the email address you provided when you created your account. Any changes to these Terms of Service will take effect immediately from the date of publication.</p>
-            <p>These Terms of Service were last updated on 09 March 2026.</p>
 
             <h2>Limitations of Use</h2>
             <p>By using Service Capture and our website, you warrant on behalf of yourself, any entity who you represent who has entered into these Terms of Service, and your users that you will not:</p>
@@ -192,16 +191,6 @@
     </footer>
 
     <script>
-        const lastUpdated = document.getElementById('last-updated');
-        if (lastUpdated) {
-            const date = new Date().toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-            lastUpdated.textContent = 'Last updated: ' + date;
-        }
-
         document.getElementById('footer-year').textContent = new Date().getFullYear();
     </script>
 
