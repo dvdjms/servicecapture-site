@@ -14,21 +14,21 @@ import { DownloadSection } from '../components/DownloadSection';
 const Home: React.FC = () => {
     return (
         <>
-        <PageContainer>
-            <Navbar />
-            <MainContent>
+            <PageContainer>
+                <Navbar />
+                <MainContent>
 
-                <HeroSection />
-                <FeatureSection />
-                <Description />
+                    <HeroSection />
+                    <FeatureSection />
+                    <Description />
 
-                <WhyServiceCapture />
-                <PDFSection />
-                <DownloadSection />
+                    <WhyServiceCapture />
+                    <PDFSection />
+                    <DownloadSection />
 
-            </MainContent>
-            <Footer />
-        </PageContainer>
+                </MainContent>
+                <Footer />
+            </PageContainer>
         </>
     );
 };

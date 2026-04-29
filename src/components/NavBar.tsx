@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import icon from '../assets/icon.png';
 
@@ -7,6 +7,8 @@ import icon from '../assets/icon.png';
 const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
+    const isHomePage = location.pathname === "/";
 
     useEffect(() => {
         const handleScroll = () => {
@@ -58,7 +60,8 @@ const Navbar: React.FC = () => {
 
                     {/* Desktop Navigation */}
                     <NavLinks>
-
+                    {isHomePage && (
+                        <>
                         <NavAnchor href="#features" onClick={handleLinkClick}>
                             Features
                         </NavAnchor>
@@ -74,7 +77,8 @@ const Navbar: React.FC = () => {
                         <NavAnchor href="#download" onClick={handleLinkClick}>
                             Download
                         </NavAnchor>
-
+                        </>
+                    )}
                         {/* <CTALink to="/waitlist" onClick={handleLinkClick}>
                             Join Waitlist
                         </CTALink> */}
@@ -89,6 +93,7 @@ const Navbar: React.FC = () => {
                         </MenuIcon>
                     </MobileMenuButton>
                 </NavContainer>
+                
             </Nav>
 
             {/* Mobile Menu Overlay */}
@@ -118,7 +123,7 @@ const Navbar: React.FC = () => {
 
 export default Navbar;
 
-// Styled Components
+
 const Nav = styled.nav<{ isScrolled: boolean }>`
     position: sticky;
     top: 0;

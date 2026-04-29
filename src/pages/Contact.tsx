@@ -1,163 +1,55 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/NavBar';
 import Footer from '../components/Footer';
-// import emailjs from '@emailjs/browser';
+
 
 const Contact: React.FC = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-    
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    // const [isSuccess, setIsSuccess] = useState(false);
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
-
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        
-        // emailjs.send(
-        //     'YOUR_SERVICE_ID',
-        //     'YOUR_TEMPLATE_ID',
-        //     {
-        //         from_name: formData.name,
-        //         from_email: formData.email,
-        //         subject: formData.subject,
-        //         message: formData.message,
-        //         to_email: 'contact@servicecapture.app'
-        //     },
-        //     'YOUR_PUBLIC_KEY'
-        // ).then(
-        //     () => {
-        //         setIsSubmitting(false);
-        //         setIsSuccess(true);
-        //         setFormData({ name: '', email: '', subject: '', message: '' });
-        //         setTimeout(() => setIsSuccess(false), 5000);
-        //     },
-        //     (error: any) => {
-        //         setIsSubmitting(false);
-        //         alert('Failed to send message. Please try again.');
-        //         console.warn('Failed to send message', error);
-        //     }
-        // );
-    };
-
     return (
         <PageContainer>
-        <Navbar />
-        <MainContent>
-            <ContactContainer>
-            <Title>Contact Us</Title>
-            
-            <ContactInfo>
-                <ContactItem>
-                <Icon>📧</Icon>
-                <ContactDetail>
-                    <Label>Email</Label>
-                    <Value>contact@servicecapture.app</Value>
-                </ContactDetail>
-                </ContactItem>
-                
-                <ContactItem>
-                <Icon>📱</Icon>
-                {/* <ContactDetail>
-                    <Label>Phone</Label>
-                    <Value>+1 (555) 123-4567</Value>
-                </ContactDetail> */}
-                </ContactItem>
-                
-                <ContactItem>
-                <Icon>📍</Icon>
-                {/* <ContactDetail>
-                    <Label>Address</Label>
-                    <Value>123 Tech Street, San Francisco, CA 94105</Value>
-                </ContactDetail> */}
-                </ContactItem>
-            </ContactInfo>
+            <Navbar />
+            <MainContent>
+                <ContactContainer>
+                    <Title>Contact Us</Title>
+                    
+                    <ContactInfo>
+                        <ContactItem>
+                            <Icon>📧</Icon>
+                            <ContactDetail>
+                                <Label>Email us directly at:</Label>
+                                <EmailLink href="mailto:contact@servicecapture.app">
+                                    contact@servicecapture.app
+                                </EmailLink>
+                            </ContactDetail>
+                        </ContactItem>
+                        
+                        <ContactItem>
+                            <Icon>💬</Icon>
+                            <ContactDetail>
+                                <Label>Response Time</Label>
+                                <Value>We'll get back to you within 24 hours</Value>
+                            </ContactDetail>
+                        </ContactItem>
+                    </ContactInfo>
 
-            {/* {isSuccess && ( */}
-                <SuccessMessage>
-                Thank you for your message! We'll get back to you soon.
-                </SuccessMessage>
-            {/* )} */}
-
-            <Form onSubmit={handleSubmit}>
-                <FormGroup>
-                <Label2 htmlFor="name">Name</Label2>
-                <Input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your name"
-                />
-                </FormGroup>
-
-                <FormGroup>
-                <Label2 htmlFor="email">Email</Label2>
-                <Input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="your.email@example.com"
-                />
-                </FormGroup>
-
-                <FormGroup>
-                <Label2 htmlFor="subject">Subject</Label2>
-                <Input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    placeholder="What is this regarding?"
-                />
-                </FormGroup>
-
-                <FormGroup>
-                <Label2 htmlFor="message">Message</Label2>
-                <TextArea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your message..."
-                />
-                </FormGroup>
-
-                <SubmitButton type="submit" disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-                </SubmitButton>
-            </Form>
-            </ContactContainer>
-        </MainContent>
-        <Footer />
+                    <NoteSection>
+                        <NoteTitle>📝 Before you reach out:</NoteTitle>
+                        <NoteList>
+                            <li>Let us know your device (iOS/Android)</li>
+                            <li>Include your app version if reporting a bug</li>
+                            <li>Screenshots are helpful for technical issues</li>
+                        </NoteList>
+                    </NoteSection>
+                </ContactContainer>
+            </MainContent>
+            <Footer />
         </PageContainer>
     );
 };
 
 export default Contact;
 
-
+// Styled components
 const PageContainer = styled.div`
     min-height: 100vh;
     display: flex;
@@ -187,7 +79,7 @@ const Title = styled.h1`
 `;
 
 const ContactInfo = styled.div`
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 `;
 
 const ContactItem = styled.div`
@@ -222,84 +114,43 @@ const Label = styled.div`
 `;
 
 const Value = styled.div`
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #2c3e50;
-    font-weight: 500;
 `;
 
-const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-`;
-
-const FormGroup = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
-
-const Label2 = styled.label`
-    margin-bottom: 8px;
-    color: #34495e;
-    font-weight: 500;
-`;
-
-const Input = styled.input`
-    padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    
-    &:focus {
-        outline: none;
-        border-color: #431980;
-    }
-`;
-
-const TextArea = styled.textarea`
-    padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 1rem;
-    min-height: 120px;
-    resize: vertical;
-    
-    &:focus {
-        outline: none;
-        border-color: #431980;
-    }
-`;
-
-const SubmitButton = styled.button`
-    padding: 15px 30px;
-    background: #431980;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
+const EmailLink = styled.a`
+    font-size: 1.3rem;
+    color: #431980;
     font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-decoration: none;
     
     &:hover {
-        background: #764ba2;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-    }
-    
-    &:disabled {
-        background: #ccc;
-        cursor: not-allowed;
-        transform: none;
+        text-decoration: underline;
+        color: #764ba2;
     }
 `;
 
-const SuccessMessage = styled.div`
-    padding: 15px;
-    background: #d4edda;
-    color: #155724;
+const NoteSection = styled.div`
+    background: #f0f4ff;
+    padding: 20px;
     border-radius: 8px;
-    margin-bottom: 20px;
-    text-align: center;
+    margin: 30px 0;
+`;
+
+const NoteTitle = styled.h3`
+    color: #431980;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+`;
+
+const NoteList = styled.ul`
+    margin: 0;
+    padding-left: 20px;
+    
+    li {
+        color: #555;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
 `;

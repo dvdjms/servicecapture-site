@@ -37,7 +37,7 @@ export const WhyServiceCapture: React.FC = () => {
         },
         {
             icon: "💼",
-            title: "Dispute protection built-in",
+            title: "Built-in dispute protection",
             description: "When clients 'forget' what was discussed, your timestamped records tell the real story. Small claims court ready."
         },
         {
