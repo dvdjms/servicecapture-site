@@ -102,10 +102,10 @@ const Navbar: React.FC = () => {
                     <MobileNavLink href="#features" onClick={handleLinkClick}>
                         Features
                     </MobileNavLink>
-                    <MobileNavLink href="why" onClick={handleLinkClick}>
+                    <MobileNavLink href="#why" onClick={handleLinkClick}>
                         Why
                     </MobileNavLink>
-                    <MobileNavLink href="#reports" onClick={handleLinkClick}>
+                    <MobileNavLink href="#report" onClick={handleLinkClick}>
                         Reports
                     </MobileNavLink>
 
