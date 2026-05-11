@@ -1001,6 +1001,10 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     flex: 1;
     padding: 40px 20px;
     background: #f2f2f7;
+    
+    @media (max-width: 768px) {
+        padding: 20px 16px;
+    }
 `,kS=A.div`
     max-width: 600px;
     margin: 0 auto;
@@ -1008,11 +1012,20 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    
+    @media (max-width: 768px) {
+        padding: 14px 14px;
+    }
 `,ZS=A.h1`
     color: #2c3e50;
     border-bottom: 2px solid #431980;
     padding-bottom: 10px;
     margin-bottom: 30px;
+    
+    @media (max-width: 768px) {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+    }
 `,VS=A.div`
     margin-bottom: 30px;
 `,om=A.div`
@@ -1027,13 +1040,28 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     &:hover {
         transform: translateX(10px);
     }
+    
+    @media (max-width: 768px) {
+        padding: 7px;
+        
+        &:hover {
+            transform: translateX(5px);
+        }
+    }
 `,um=A.span`
     font-size: 24px;
     margin-right: 15px;
     width: 40px;
     text-align: center;
+    
+    @media (max-width: 768px) {
+        font-size: 20px;
+        width: 20px;
+        margin-right: 10px;
+    }
 `,cm=A.div`
     flex: 1;
+    min-width: 0; /* Allows text truncation */
 `,sm=A.div`
     font-size: 0.9rem;
     color: #7f8c8d;
@@ -1041,26 +1069,45 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
 `,KS=A.div`
     font-size: 1rem;
     color: #2c3e50;
+    
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
 `,JS=A.a`
     font-size: 1.3rem;
     color: #431980;
     font-weight: 600;
     text-decoration: none;
-    word-break: break-all;
+    word-break: break-all; /* Forces breaking on mobile */
+    display: inline-block;
     
     &:hover {
         text-decoration: underline;
         color: #764ba2;
+    }
+    
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+        word-break: break-word;
     }
 `,$S=A.div`
     background: #f0f4ff;
     padding: 20px;
     border-radius: 8px;
     margin: 30px 0;
+    
+    @media (max-width: 768px) {
+        padding: 16px;
+        margin: 20px 0;
+    }
 `,WS=A.h3`
     color: #431980;
     margin-bottom: 12px;
     font-size: 0.95rem;
+    
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
 `,FS=A.ul`
     margin: 0;
     padding-left: 20px;
@@ -1070,5 +1117,10 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
         margin-bottom: 8px;
         font-size: 0.9rem;
         line-height: 1.4;
+        
+        @media (max-width: 768px) {
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
     }
 `,IS=()=>{const{pathname:i}=aa();return _.useEffect(()=>{window.scrollTo(0,0)},[i]),null},PS=()=>(_.useEffect(()=>{const i=navigator.userAgent,o=/android/i.test(i),f=/iPhone|iPad|iPod/.test(i)||navigator.userAgent.includes("Mac")&&navigator.maxTouchPoints>1,u=setTimeout(()=>{o?window.location.replace("https://play.google.com/store/apps/details?id=com.servicecapture.app"):f&&window.location.replace("https://apps.apple.com/app/6760407010")},150);return()=>clearTimeout(u)},[]),c.jsx(ly,{mode:"fallback"}));function ew(){const i=wm();return _.useEffect(()=>{const o=sessionStorage.getItem("redirect");o&&(sessionStorage.removeItem("redirect"),i(o,{replace:!0}))},[]),c.jsxs(c.Fragment,{children:[c.jsx(IS,{}),c.jsxs(N0,{children:[c.jsx(wn,{path:"/",element:c.jsx(vS,{})}),c.jsx(wn,{path:"/privacy",element:c.jsx(SS,{})}),c.jsx(wn,{path:"/terms",element:c.jsx(zS,{})}),c.jsx(wn,{path:"/cookies",element:c.jsx(US,{})}),c.jsx(wn,{path:"/contact",element:c.jsx(GS,{})}),c.jsx(wn,{path:"/download",element:c.jsx(PS,{})})]})]})}function tw(){return c.jsx(i1,{children:c.jsx(ew,{})})}qv.createRoot(document.getElementById("root")).render(c.jsx(_.StrictMode,{children:c.jsx(tw,{})}));
