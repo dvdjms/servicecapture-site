@@ -1046,6 +1046,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     color: #431980;
     font-weight: 600;
     text-decoration: none;
+    word-break: break-all;
     
     &:hover {
         text-decoration: underline;
