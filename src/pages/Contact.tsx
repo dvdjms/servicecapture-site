@@ -123,6 +123,7 @@ const EmailLink = styled.a`
     color: #431980;
     font-weight: 600;
     text-decoration: none;
+    word-break: break-all;
     
     &:hover {
         text-decoration: underline;

@@ -1,0 +1,48 @@
+[
+    {
+        "icon": "📋",
+        "title": "Today’s Jobs",
+        "description": "Start your day with a clear view of the day's jobs, including client names and scheduled times.",
+        "screenshot": "dashboard"
+    },
+    {
+        "icon": "👥",
+        "title": "All clients in one place",
+        "description": "Quickly search, view, and manage all your clients in one organised list with instant access to details.",
+        "screenshot": "clientList"
+    },
+    {
+        "icon": "👤",
+        "title": "Client details",
+        "description": "View full client information, contact details, and complete job history to stay organised and informed.",
+        "screenshot": "clientDetail"
+    },
+    {
+        "icon": "📂",
+        "title": "Job details",
+        "description": "Keep every job organised with notes, photos, and client information stored together for easy access anytime.",
+        "screenshot": "clientDetail"
+    },
+    {
+        "icon": "📅",
+        "title": "Plan your schedule",
+        "description": "Easily organise upcoming jobs, manage availability, and plan your workload with a simple, intuitive calendar view.",
+        "screenshot": "schedualerScreen"
+    },
+        {
+        "icon": "🖼️",
+        "title": "Photo gallery",
+        "description": "Keep a visual record of every job with photos & reports that are easy to access, review, and share with clients.",
+        "screenshot": "GalleryScreen"
+    },
+    {
+        "icon": "📄",
+        "title": "Sharable reports",
+        "description": "Create professional PDF reports with job details and photos, ready to share with clients in seconds.",
+        "screenshot": "PDFScreen"
+    },
+
+    {
+        "Keywords": "proof of work,work documentation,client management,job tracking,PDF reports,before and after photos"
+    }
+]

@@ -79,9 +79,6 @@ const Navbar: React.FC = () => {
                         </NavAnchor>
                         </>
                     )}
-                        {/* <CTALink to="/waitlist" onClick={handleLinkClick}>
-                            Join Waitlist
-                        </CTALink> */}
                     </NavLinks>
 
                     {/* Mobile Menu Button */}
@@ -112,9 +109,6 @@ const Navbar: React.FC = () => {
                     <MobileNavLink href="#download" onClick={handleLinkClick}>
                         Download
                     </MobileNavLink>
-                    {/* <MobileCTALink to="/waitlist" onClick={handleLinkClick}>
-                        Join Waitlist →
-                    </MobileCTALink> */}
                 </MobileNavLinks>
             </MobileMenu>
         </>
@@ -169,8 +163,6 @@ const LogoImage = styled.img`
     }
 `;
 
-
-
 const LogoText = styled.div`
     display: flex;
     align-items: center;
@@ -217,52 +209,6 @@ const NavLinks = styled.div`
         display: none;
     }
 `;
-
-// const NavLink = styled(Link)<{ active: boolean }>`
-//     text-decoration: none;
-//     font-size: 1rem;
-//     font-weight: 500;
-//     color: ${props => props.active ? '#431980' : '#495057'};
-//     position: relative;
-//     transition: color 0.2s ease;
-//     padding: 8px 0;
-    
-//     &::after {
-//         content: '';
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//         width: ${props => props.active ? '100%' : '0'};
-//         height: 2px;
-//         background: #431980;
-//         transition: width 0.3s ease;
-//     }
-    
-//     &:hover {
-//         color: #431980;
-        
-//         &::after {
-//             width: 100%;
-//         }
-//     }
-// `;
-
-// const CTALink = styled(Link)`
-//     background: linear-gradient(135deg, #431980 0%, #5a2a9e 100%);
-//     color: white;
-//     text-decoration: none;
-//     padding: 10px 24px;
-//     border-radius: 40px;
-//     font-weight: 600;
-//     font-size: 0.9rem;
-//     transition: all 0.3s ease;
-//     box-shadow: 0 2px 8px rgba(67, 25, 128, 0.2);
-    
-//     &:hover {
-//         transform: translateY(-2px);
-//         box-shadow: 0 6px 16px rgba(67, 25, 128, 0.3);
-//     }
-// `;
 
 // Mobile Menu Components
 const MobileMenuButton = styled.button`
@@ -347,24 +293,6 @@ const MobileNavLink = styled.a`
         padding-left: 8px;
     }
 `;
-
-// const MobileCTALink = styled(Link)`
-//     background: linear-gradient(135deg, #431980 0%, #5a2a9e 100%);
-//     color: white;
-//     text-decoration: none;
-//     text-align: center;
-//     padding: 14px 24px;
-//     border-radius: 40px;
-//     font-weight: 600;
-//     font-size: 1rem;
-//     margin-top: 20px;
-//     transition: all 0.3s ease;
-    
-//     &:hover {
-//         transform: translateX(4px);
-//     }
-// `;
-
 
 const NavAnchor = styled.a<{ active?: boolean }>`
     text-decoration: none;
