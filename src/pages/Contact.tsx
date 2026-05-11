@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Navbar from '../components/NavBar';
 import Footer from '../components/Footer';
 
-
 const Contact: React.FC = () => {
     return (
         <PageContainer>
@@ -60,6 +59,10 @@ const MainContent = styled.main`
     flex: 1;
     padding: 40px 20px;
     background: #f2f2f7;
+    
+    @media (max-width: 768px) {
+        padding: 20px 16px;
+    }
 `;
 
 const ContactContainer = styled.div`
@@ -69,6 +72,10 @@ const ContactContainer = styled.div`
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    
+    @media (max-width: 768px) {
+        padding: 14px 14px;
+    }
 `;
 
 const Title = styled.h1`
@@ -76,6 +83,11 @@ const Title = styled.h1`
     border-bottom: 2px solid #431980;
     padding-bottom: 10px;
     margin-bottom: 30px;
+    
+    @media (max-width: 768px) {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+    }
 `;
 
 const ContactInfo = styled.div`
@@ -94,6 +106,14 @@ const ContactItem = styled.div`
     &:hover {
         transform: translateX(10px);
     }
+    
+    @media (max-width: 768px) {
+        padding: 7px;
+        
+        &:hover {
+            transform: translateX(5px);
+        }
+    }
 `;
 
 const Icon = styled.span`
@@ -101,10 +121,17 @@ const Icon = styled.span`
     margin-right: 15px;
     width: 40px;
     text-align: center;
+    
+    @media (max-width: 768px) {
+        font-size: 20px;
+        width: 20px;
+        margin-right: 10px;
+    }
 `;
 
 const ContactDetail = styled.div`
     flex: 1;
+    min-width: 0; /* Allows text truncation */
 `;
 
 const Label = styled.div`
@@ -116,6 +143,10 @@ const Label = styled.div`
 const Value = styled.div`
     font-size: 1rem;
     color: #2c3e50;
+    
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
 `;
 
 const EmailLink = styled.a`
@@ -123,11 +154,17 @@ const EmailLink = styled.a`
     color: #431980;
     font-weight: 600;
     text-decoration: none;
-    word-break: break-all;
+    word-break: break-all; /* Forces breaking on mobile */
+    display: inline-block;
     
     &:hover {
         text-decoration: underline;
         color: #764ba2;
+    }
+    
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+        word-break: break-word;
     }
 `;
 
@@ -136,12 +173,21 @@ const NoteSection = styled.div`
     padding: 20px;
     border-radius: 8px;
     margin: 30px 0;
+    
+    @media (max-width: 768px) {
+        padding: 16px;
+        margin: 20px 0;
+    }
 `;
 
 const NoteTitle = styled.h3`
     color: #431980;
     margin-bottom: 12px;
     font-size: 0.95rem;
+    
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
 `;
 
 const NoteList = styled.ul`
@@ -153,5 +199,10 @@ const NoteList = styled.ul`
         margin-bottom: 8px;
         font-size: 0.9rem;
         line-height: 1.4;
+        
+        @media (max-width: 768px) {
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
     }
 `;
