@@ -35,7 +35,11 @@ export const HeroSection: React.FC = () => {
                         </FeatureList>
                         
                         <ButtonRow>
-                            <BadgeButton>
+                            <BadgeButton
+                                href="https://apps.apple.com/gb/app/service-capture/id6760407010" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <AppleBadgeImage 
                                     src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1714435200"
                                     alt="Download on the App Store"
@@ -43,7 +47,11 @@ export const HeroSection: React.FC = () => {
                                 />
                             </BadgeButton>
 
-                            <BadgeButton>
+                            <BadgeButton
+                                href="https://play.google.com/store/apps/details?id=com.servicecapture.app" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <GoogleBadgeImage 
                                     src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                                     alt="Get it on Google Play"

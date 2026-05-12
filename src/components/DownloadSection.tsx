@@ -22,7 +22,7 @@ export const DownloadSection: React.FC<{ mode?: 'landing' | 'fallback' }> = ({ m
             <ButtonRow>
                 <StoreLinks>
                     <StoreLink 
-                        href="https://apps.apple.com/your-app-link" 
+                        href="https://apps.apple.com/gb/app/service-capture/id6760407010" 
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -33,7 +33,7 @@ export const DownloadSection: React.FC<{ mode?: 'landing' | 'fallback' }> = ({ m
                     </StoreLink>
 
                     <StoreLink 
-                        href="https://play.google.com/store/apps/your-app-link" 
+                        href="https://play.google.com/store/apps/details?id=com.servicecapture.app" 
                         target="_blank"
                         rel="noopener noreferrer"
                     >
