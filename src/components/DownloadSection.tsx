@@ -47,7 +47,7 @@ export const DownloadSection: React.FC<{ mode?: 'landing' | 'fallback' }> = ({ m
                 {mode === 'landing' && isDesktop && (
                     <QRCodeWrapper>
                         <QRCodeImage src={appQRCode} alt="Scan to download" />
-                        <QRLabel>Scan with your phone</QRLabel>
+                        {/* <QRLabel>Scan with your phone</QRLabel> */}
                     </QRCodeWrapper>
                 )}
             </ButtonRow>
@@ -146,16 +146,17 @@ const QRCodeWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 16px 20px;
+    padding: 5px 5px;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border: 1px solid #e9ecef;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+    border: 1px solid #ede9ef;
+    transform: rotate(5deg);
 `;
 
 const QRCodeImage = styled.img`
-    width: 110px;
-    height: 110px;
+    width: 210px;
+    height: 210px;
     display: block;
 `;
 
