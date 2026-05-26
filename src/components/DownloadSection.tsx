@@ -151,7 +151,7 @@ const QRCodeWrapper = styled.div`
     border-radius: 20px;
     box-shadow: 0 10px 22px rgba(0,0,0,0.08);
     border: 1px solid #ede9ef;
-    transform: rotate(5deg);
+    //transform: rotate(5deg);
 `;
 
 const QRCodeImage = styled.img`
