@@ -160,9 +160,3 @@ const QRCodeImage = styled.img`
     display: block;
 `;
 
-const QRLabel = styled.span`
-    font-size: 0.75rem;
-    color: #6c757d;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-`;
